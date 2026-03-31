@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bundle Excel + IA COMPLETO — Dashboard + 100 Prompts · $59 USD</title>
+<meta name="description" content="Los dos productos juntos: Dashboard de Ventas con IA ($49) + 100 Prompts Excel + IA ($19). Un solo pago de $59. Ahorrás $9. Descarga instantánea.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080910;--s1:#0e1018;--s2:#141620;--s3:#1a1d2a;--s4:#212435;
+  --gold:#e8c96d;--gold2:#f5dfa0;--gold-d:#b8952a;
+  --gold-dim:rgba(232,201,109,0.1);--gold-glo:rgba(232,201,109,0.18);
+  --cyan:#00e5a0;--cyan-dim:rgba(0,229,160,0.1);--amber:#ffe566;
+  --white:#eef0f8;--muted:#5a5f7a;--muted2:#8890b0;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.11);
+  --red:#ff5c72;--green:#3dd68c;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;overflow-x:hidden;line-height:1.6}
+body::after{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.45;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E")}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;background:rgba(8,9,16,.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 56px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--gold);letter-spacing:.5px}
+.nav-pill{display:flex;align-items:center;gap:12px}
+.nav-badge{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted2);border:1px solid var(--border2);padding:4px 12px;border-radius:20px}
+.nav-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg);font-family:'Outfit',sans-serif;font-weight:600;font-size:13px;padding:9px 22px;border-radius:4px;border:none;cursor:pointer;text-decoration:none;transition:opacity .2s}
+.nav-btn:hover{opacity:.85}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 48px 60px;position:relative;overflow:hidden}
+.hero-rings{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(232,201,109,.06)}
+.r1{width:400px;height:400px}.r2{width:700px;height:700px;border-color:rgba(232,201,109,.04)}
+.r3{width:1000px;height:1000px;border-color:rgba(232,201,109,.025)}.r4{width:1400px;height:1400px;border-color:rgba(232,201,109,.015)}
+.hero::before{content:'';position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(232,201,109,.07) 0%,transparent 60%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:860px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(232,201,109,.25);background:var(--gold-dim);padding:6px 18px;border-radius:3px;margin-bottom:32px;animation:up .7s ease both}
+.ey-star{color:var(--gold);font-size:12px;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pretitle{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted2);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;animation:up .7s .06s ease both}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(54px,8vw,104px);line-height:.9;font-weight:900;margin-bottom:6px;animation:up .7s .12s ease both}
+.hero-title .gold-italic{font-style:italic;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold2),var(--gold-d));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:18px;font-weight:300;color:var(--muted2);max-width:600px;margin:22px auto 0;line-height:1.75;animation:up .7s .18s ease both}
+.hero-sub strong{color:var(--white);font-weight:500}
+
+/* PRODUCT CARDS IN HERO */
+.hero-prods{display:flex;align-items:center;justify-content:center;gap:0;margin:48px 0 40px;animation:up .7s .24s ease both}
+.hp-card{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:22px 26px;text-align:left;width:220px;transition:all .3s}
+.hp-card:hover{border-color:rgba(232,201,109,.25);transform:translateY(-3px)}
+.hp-card.tilt1{transform:rotate(-2deg)}.hp-card.tilt1:hover{transform:rotate(-1deg) translateY(-4px)}
+.hp-card.tilt2{transform:rotate(2deg)}.hp-card.tilt2:hover{transform:rotate(1deg) translateY(-4px)}
+.hpc-icon{font-size:26px;margin-bottom:10px}
+.hpc-name{font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px}
+.hpc-price{font-family:'Space Mono',monospace;font-size:18px;color:var(--muted2);text-decoration:line-through}
+.hpc-sub{font-size:10px;color:var(--muted);font-family:'Space Mono',monospace}
+.hp-plus{font-family:'Playfair Display',serif;font-size:48px;color:var(--gold);padding:0 20px;line-height:1;flex-shrink:0;text-shadow:0 0 40px var(--gold-glo)}
+.hp-equals{font-family:'Playfair Display',serif;font-size:32px;color:var(--muted);padding:0 12px;flex-shrink:0}
+.hp-result{background:linear-gradient(135deg,var(--s3),var(--s4));border:1px solid rgba(232,201,109,.3);border-radius:12px;padding:22px 26px;text-align:center;width:200px;box-shadow:0 0 40px rgba(232,201,109,.08)}
+.hpr-label{font-family:'Space Mono',monospace;font-size:9px;color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+.hpr-price{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:var(--gold);line-height:1;text-shadow:0 0 30px var(--gold-glo)}
+.hpr-sub{font-size:12px;color:var(--muted2);margin-top:4px;font-family:'Space Mono',monospace}
+.hpr-save{font-size:11px;color:var(--green);margin-top:6px;display:flex;align-items:center;justify-content:center;gap:4px}
+
+/* CTA */
+.hero-cta{animation:up .7s .3s ease both}
+.btn-gold{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--bg);font-family:'Outfit',sans-serif;font-weight:600;font-size:16px;padding:18px 44px;border-radius:4px;border:none;cursor:pointer;text-decoration:none;transition:all .25s;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(232,201,109,.22)}
+.btn-gold:hover{box-shadow:0 12px 40px rgba(232,201,109,.38);transform:translateY(-2px)}
+.btn-gold:active{transform:scale(.98)}
+.btn-arr{font-size:20px;transition:transform .25s}
+.btn-gold:hover .btn-arr{transform:translateX(5px)}
+.hero-trust{font-size:12px;color:var(--muted);font-family:'Space Mono',monospace;margin-top:18px;animation:up .7s .36s ease both}
+
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* TRUST STRIP */
+.trust-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 56px;display:flex;gap:0;overflow:hidden}
+.ts-item{display:flex;align-items:center;gap:10px;padding:0 36px;white-space:nowrap;flex-shrink:0}
+.ts-item+.ts-item{border-left:1px solid var(--border2)}
+.ts-icon{font-size:15px}
+.ts-text{font-size:12px;color:var(--muted2)}
+.ts-text strong{color:var(--white);font-weight:500}
+
+/* LAYOUT */
+.wrap{max-width:1140px;margin:0 auto;padding:0 56px}
+.section{padding:88px 0;border-bottom:1px solid var(--border)}
+.slabel{font-family:'Space Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,60px);line-height:.95;margin-bottom:14px}
+.stitle em{font-style:italic;color:var(--gold)}
+.ssub{font-size:16px;color:var(--muted2);font-weight:300;max-width:540px;line-height:1.75;margin-bottom:52px}
+
+/* INSIDE PRODUCTS */
+.inside-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.inside-prod{border-radius:16px;overflow:hidden;border:1px solid var(--border2)}
+.ip-head{padding:24px 28px;display:flex;align-items:flex-start;justify-content:space-between}
+.ip-icon{font-size:30px;margin-bottom:10px}
+.ip-name{font-size:17px;font-weight:600;color:var(--white);margin-bottom:4px}
+.ip-tagline{font-size:13px;color:var(--muted2);line-height:1.5}
+.ip-price-box{text-align:right;flex-shrink:0}
+.ip-was{font-family:'Space Mono',monospace;font-size:12px;color:var(--red);text-decoration:line-through}
+.ip-val{font-family:'Playfair Display',serif;font-size:26px;font-weight:900}
+.ip-body{padding:0 28px 28px}
+.ip-feat{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted2);line-height:1.5;margin-bottom:8px}
+.ip-ck{flex-shrink:0;font-size:13px;margin-top:1px}
+.ip1{background:linear-gradient(180deg,rgba(0,229,160,.05) 0%,var(--s2) 100%)}
+.ip1 .ip-head{background:rgba(0,229,160,.06);border-bottom:1px solid rgba(0,229,160,.1)}
+.ip1 .ip-val{color:var(--cyan)}.ip1 .ip-ck{color:var(--cyan)}
+.ip2{background:linear-gradient(180deg,rgba(255,229,102,.05) 0%,var(--s2) 100%)}
+.ip2 .ip-head{background:rgba(255,229,102,.06);border-bottom:1px solid rgba(255,229,102,.1)}
+.ip2 .ip-val{color:var(--amber)}.ip2 .ip-ck{color:var(--amber)}
+
+/* VALUE STACK */
+.value-stack{background:var(--s1);border:1px solid rgba(232,201,109,.2);border-radius:16px;overflow:hidden;max-width:680px;margin:0 auto}
+.vs-r{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--border)}
+.vs-r:last-child{border:none}
+.vs-name{font-size:14px;color:var(--white);font-weight:500}
+.vs-sub{font-size:12px;color:var(--muted2);margin-top:2px}
+.vs-price{font-family:'Space Mono',monospace;font-size:16px;font-weight:700;white-space:nowrap;margin-left:20px}
+.vs-total{background:linear-gradient(135deg,var(--gold-dim),rgba(232,201,109,.04))}
+.vs-total .vs-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold)}
+.vs-total .vs-price{color:var(--gold);font-size:22px}
+.vs-save-row{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(61,214,140,.06);border-top:1px solid rgba(61,214,140,.15)}
+.vs-save-txt{font-size:13px;color:var(--green);font-weight:500;display:flex;align-items:center;gap:6px}
+.vs-save-val{font-family:'Space Mono',monospace;font-size:15px;color:var(--green);font-weight:700}
+
+/* FOR WHO */
+.for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.for-card{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:26px;transition:all .25s}
+.for-card:hover{border-color:rgba(232,201,109,.2);transform:translateY(-3px)}
+.fc-av{width:48px;height:48px;border-radius:50%;background:var(--gold-dim);border:1px solid rgba(232,201,109,.2);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.fc-role{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px}
+.fc-desc{font-size:13px;color:var(--muted2);line-height:1.6;margin-bottom:14px}
+.fc-gets{font-size:12px;color:var(--gold);display:flex;gap:6px;align-items:flex-start;line-height:1.5}
+
+/* COMPARISON */
+.comp-table{width:100%;border-collapse:collapse}
+.comp-table th{padding:14px 20px;text-align:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);border-bottom:1px solid var(--border2)}
+.comp-table th.best{background:var(--gold-dim);color:var(--gold);border-bottom-color:rgba(232,201,109,.25)}
+.comp-table th:first-child{text-align:left}
+.comp-table td{padding:14px 20px;border-bottom:1px solid var(--border);text-align:center;font-size:13px;color:var(--muted2)}
+.comp-table td:first-child{text-align:left;font-weight:500;color:var(--white)}
+.comp-table td.best{background:rgba(232,201,109,.03)}
+.comp-table tr:last-child td{border:none}
+.ic-y{color:var(--green);font-size:14px}.ic-n{color:var(--red);font-size:12px}
+
+/* REVIEWS */
+.reviews-bg{background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:96px 56px}
+.reviews-grid{max-width:1140px;margin:52px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:26px;transition:border-color .25s}
+.review:hover{border-color:rgba(232,201,109,.2)}
+.rev-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:14px}
+.rev-text{font-size:14px;color:var(--muted2);line-height:1.75;font-style:italic;margin-bottom:20px}
+.rev-text strong{color:var(--white);font-style:normal;font-weight:500}
+.rev-author{display:flex;align-items:center;gap:12px}
+.rev-av{width:38px;height:38px;border-radius:50%;background:var(--gold-dim);border:1px solid rgba(232,201,109,.2);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:14px;color:var(--gold)}
+.rev-name{font-size:13px;font-weight:600;color:var(--white)}
+.rev-role{font-size:11px;color:var(--muted);font-family:'Space Mono',monospace}
+
+/* FAQ */
+.faq-list{max-width:760px}
+.faq-item{border-bottom:1px solid var(--border2)}
+.faq-q{width:100%;background:none;border:none;text-align:left;color:var(--white);font-family:'Outfit',sans-serif;font-size:15px;font-weight:500;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s}
+.faq-q:hover{color:var(--gold)}
+.faq-chev{font-size:18px;color:var(--muted2);transition:transform .3s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s,padding .35s}
+.faq-a.open{max-height:280px;padding-bottom:20px}
+.faq-a p{font-size:14px;color:var(--muted2);line-height:1.75}
+.faq-a p strong{color:var(--white);font-weight:500}
+.faq-chev.rot{transform:rotate(180deg)}
+
+/* FINAL CTA */
+.final-cta{padding:120px 48px;text-align:center;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(232,201,109,.08) 0%,transparent 60%);pointer-events:none}
+.final-title{font-family:'Playfair Display',serif;font-size:clamp(52px,7vw,92px);line-height:.92;margin-bottom:20px;position:relative}
+.final-title em{font-style:italic;color:var(--gold)}
+.final-sub{font-size:16px;color:var(--muted2);max-width:480px;margin:0 auto 48px;font-weight:300;line-height:1.75}
+.cta-box{background:var(--s1);border:1px solid rgba(232,201,109,.22);border-radius:20px;padding:44px;max-width:520px;margin:0 auto;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 60px rgba(232,201,109,.06);position:relative}
+.cb-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:24px}
+.cb-includes{text-align:left;margin-bottom:32px}
+.ci-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+.ci-row:last-child{border:none}
+.ci-ck{flex-shrink:0;font-size:14px}
+.ci-txt{color:var(--muted2);line-height:1.5}
+.ci-txt strong{color:var(--white);font-weight:500}
+.price-display{display:flex;align-items:flex-end;justify-content:center;gap:16px;margin-bottom:28px}
+.pd-was{font-family:'Space Mono',monospace;font-size:22px;color:var(--red);text-decoration:line-through;padding-bottom:6px}
+.pd-now{font-family:'Playfair Display',serif;font-size:72px;font-weight:900;color:var(--gold);line-height:1;text-shadow:0 0 40px var(--gold-glo)}
+.pd-usd{font-family:'Space Mono',monospace;font-size:16px;color:var(--gold-d);padding-bottom:12px}
+.save-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(61,214,140,.1);border:1px solid rgba(61,214,140,.2);border-radius:20px;padding:5px 16px;font-family:'Space Mono',monospace;font-size:12px;color:var(--green);margin-bottom:28px}
+.btn-cta-main{width:100%;padding:20px;border-radius:6px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--bg);font-family:'Outfit',sans-serif;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;transition:all .25s;box-shadow:0 8px 32px rgba(232,201,109,.25)}
+.btn-cta-main:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 12px 40px rgba(232,201,109,.38)}
+.btn-cta-main:active{transform:scale(.98)}
+.cb-guar{margin-top:16px;font-size:12px;color:var(--muted);font-family:'Space Mono',monospace;display:flex;align-items:center;justify-content:center;gap:6px}
+
+footer{border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center}
+.foot-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--muted)}
+.foot-note{font-size:11px;color:var(--muted);font-family:'Space Mono',monospace}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero{padding:60px 24px}.hero-prods{flex-direction:column;gap:16px}
+  .hp-card.tilt1,.hp-card.tilt2{transform:none}
+  .hp-plus{padding:8px 0;font-size:32px}.hp-equals{display:none}
+  .inside-grid,.for-grid,.reviews-grid{grid-template-columns:1fr}
+  .wrap{padding:0 24px}.section{padding:60px 0}
+  .reviews-bg{padding:60px 24px}.final-cta{padding:80px 24px}
+  footer,.nav,.trust-strip{padding:14px 24px}.nav-badge{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">Excel · IA Tools</div>
+  <div class="nav-pill">
+    <div class="nav-badge">BUNDLE COMPLETO · $59 USD</div>
+    <a href="#comprar" class="nav-btn">Obtener el bundle →</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-rings">
+    <div class="ring r1"></div><div class="ring r2"></div>
+    <div class="ring r3"></div><div class="ring r4"></div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">
+      <span class="ey-star">✦</span>
+      BUNDLE COMPLETO · PRECIO ESPECIAL · DESCARGA INSTANTÁNEA
+      <span class="ey-star">✦</span>
+    </div>
+    <div class="pretitle">LA COMBINACIÓN QUE MULTIPLICA TU PRODUCTIVIDAD</div>
+    <h1 class="hero-title">
+      Todo lo que<br>
+      <span class="gold-italic">necesitás</span><br>
+      en un pack.
+    </h1>
+    <p class="hero-sub">
+      El <strong>Dashboard que analiza tus ventas con IA</strong> más los
+      <strong>100 Prompts para Excel</strong> que transforman cómo trabajás con datos.
+      Juntos, con un descuento exclusivo.
+    </p>
+
+    <div class="hero-prods">
+      <div class="hp-card tilt1">
+        <div class="hpc-icon">📊</div>
+        <div class="hpc-name">Dashboard de Ventas con IA</div>
+        <div class="hpc-price">$49</div>
+        <div class="hpc-sub">precio individual</div>
+      </div>
+      <div class="hp-plus">+</div>
+      <div class="hp-card tilt2">
+        <div class="hpc-icon">✦</div>
+        <div class="hpc-name">100 Prompts Excel + IA</div>
+        <div class="hpc-price">$19</div>
+        <div class="hpc-sub">precio individual</div>
+      </div>
+      <div class="hp-equals">=</div>
+      <div class="hp-result">
+        <div class="hpr-label">BUNDLE COMPLETO</div>
+        <div class="hpr-price">$59</div>
+        <div class="hpr-sub">en lugar de $68</div>
+        <div class="hpr-save">✓ Ahorrás $9 USD</div>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#comprar" class="btn-gold">
+        Obtener el bundle ahora <span class="btn-arr">→</span>
+      </a>
+    </div>
+    <div class="hero-trust">⚡ Descarga instantánea · Excel 2016/2019/365 · En español · Garantía 7 días</div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="ts-item"><span class="ts-icon">🎁</span><span class="ts-text"><strong>2 productos</strong> en 1 compra</span></div>
+  <div class="ts-item"><span class="ts-icon">⚡</span><span class="ts-text"><strong>Descarga inmediata</strong></span></div>
+  <div class="ts-item"><span class="ts-icon">🔒</span><span class="ts-text"><strong>Pago único</strong> sin suscripción</span></div>
+  <div class="ts-item"><span class="ts-icon">🔄</span><span class="ts-text"><strong>Actualizaciones</strong> de por vida</span></div>
+  <div class="ts-item"><span class="ts-icon">🛡️</span><span class="ts-text"><strong>Garantía</strong> 7 días sin preguntas</span></div>
+</div>
+
+<!-- ═══ QUÉ INCLUYE ═══ -->
+<div class="wrap">
+<section class="section reveal">
+  <div class="slabel">QUÉ RECIBÍS</div>
+  <h2 class="stitle">Dos productos.<br><em>Una sola compra.</em></h2>
+  <p class="ssub">Cada uno vale su precio por separado. Juntos, se potencian: los prompts te enseñan a hacer las preguntas correctas; el dashboard te da las respuestas automáticamente.</p>
+  <div class="inside-grid">
+    <div class="inside-prod ip1">
+      <div class="ip-head">
+        <div>
+          <div class="ip-icon">📊</div>
+          <div class="ip-name">Dashboard de Ventas con IA</div>
+          <div class="ip-tagline">Excel con ChatGPT integrado. Reportes automáticos en 10 segundos.</div>
+        </div>
+        <div class="ip-price-box">
+          <div class="ip-was">$49</div>
+          <div class="ip-val">incluido</div>
+        </div>
+      </div>
+      <div class="ip-body">
+        <div class="ip-feat"><span class="ip-ck">✓</span>5 hojas interconectadas con 152 fórmulas automáticas</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>Botón "Analizar con IA" que genera el resumen completo</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>KPIs, alertas automáticas y top 5 productos</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>Ventas por canal, por mes y por vendedor</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>Código VBA completo + instrucciones paso a paso</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>30 ventas de ejemplo precargadas</div>
+      </div>
+    </div>
+    <div class="inside-prod ip2">
+      <div class="ip-head">
+        <div>
+          <div class="ip-icon">✦</div>
+          <div class="ip-name">100 Prompts Excel + IA</div>
+          <div class="ip-tagline">Copiás, completás los [campos] y pegás en ChatGPT. Listo.</div>
+        </div>
+        <div class="ip-price-box">
+          <div class="ip-was">$19</div>
+          <div class="ip-val">incluido</div>
+        </div>
+      </div>
+      <div class="ip-body">
+        <div class="ip-feat"><span class="ip-ck">✓</span>20 prompts de Ventas: análisis, pronósticos, embudos</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>20 prompts de Finanzas: flujo de caja, ROI, costos</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>20 prompts de RRHH: desempeño, liquidaciones, OKRs</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>20 prompts de Marketing: copy, campañas, métricas</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>20 prompts de Operaciones: stock, procesos, KPIs</div>
+        <div class="ip-feat"><span class="ip-ck">✓</span>TIP de uso en cada prompt · 3 niveles de dificultad</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ═══ VALOR ═══ -->
+<div style="background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:88px 56px">
+  <div style="max-width:1140px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:44px">
+      <div class="slabel" style="justify-content:center;display:flex">EL VALOR</div>
+      <h2 class="stitle">¿Cuánto vale<br><em>realmente?</em></h2>
+    </div>
+    <div class="value-stack reveal">
+      <div class="vs-r"><div><div class="vs-name">📊 Dashboard de Ventas con IA</div><div class="vs-sub">Archivo .xlsx + código VBA + instrucciones</div></div><div class="vs-price" style="color:var(--cyan)">$49</div></div>
+      <div class="vs-r"><div><div class="vs-name">✦ 100 Prompts Excel + IA</div><div class="vs-sub">5 categorías · 3 niveles · TIP en cada prompt</div></div><div class="vs-price" style="color:var(--amber)">$19</div></div>
+      <div class="vs-r" style="background:rgba(255,255,255,.01)"><div><div class="vs-name" style="color:var(--muted2)">Precio si los comprás por separado</div></div><div class="vs-price" style="color:var(--muted2);text-decoration:line-through">$68</div></div>
+      <div class="vs-r vs-total"><div><div class="vs-name">🎁 Bundle COMPLETO — precio especial</div><div class="vs-sub" style="color:var(--muted2)">Ambos productos · descarga instantánea</div></div><div class="vs-price">$59</div></div>
+      <div class="vs-save-row"><div class="vs-save-txt">✓ Tu ahorro con el bundle</div><div class="vs-save-val">$9 USD — 13% de descuento</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PARA QUIÉN ═══ -->
+<div class="wrap">
+<section class="section reveal">
+  <div class="slabel">PARA QUIÉN ES</div>
+  <h2 class="stitle">¿Es para vos<br><em>este bundle?</em></h2>
+  <p class="ssub">Si trabajás con datos en Excel y querés que la IA haga el trabajo pesado, sí.</p>
+  <div class="for-grid">
+    <div class="for-card">
+      <div class="fc-av">📈</div>
+      <div class="fc-role">Gerentes y analistas</div>
+      <div class="fc-desc">Armás reportes que consumen horas. Tu jefe quiere los números interpretados, no tablas crudas sin contexto.</div>
+      <div class="fc-gets">✦ El dashboard genera el reporte y los prompts te ayudan a presentarlo a dirección.</div>
+    </div>
+    <div class="for-card">
+      <div class="fc-av">🏪</div>
+      <div class="fc-role">Dueños de negocio</div>
+      <div class="fc-desc">Tenés los datos en planillas pero no tenés tiempo para analizarlos. Las decisiones las tomás por intuición.</div>
+      <div class="fc-gets">✦ Con los dos productos, la IA analiza tus datos y te dice exactamente qué hacer.</div>
+    </div>
+    <div class="for-card">
+      <div class="fc-av">💼</div>
+      <div class="fc-role">Freelancers y consultores</div>
+      <div class="fc-desc">Tus clientes esperan análisis rápidos y profesionales pero armarlo desde cero roba horas facturables.</div>
+      <div class="fc-gets">✦ Entregás análisis premium en una fracción del tiempo. El bundle es tu ventaja competitiva.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ═══ COMPARATIVA ═══ -->
+<div style="background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:88px 56px">
+  <div style="max-width:1140px;margin:0 auto" class="reveal">
+    <div class="slabel">COMPARATIVA</div>
+    <h2 class="stitle" style="margin-bottom:44px">Bundle vs<br><em>compra separada</em></h2>
+    <table class="comp-table">
+      <thead><tr>
+        <th style="width:38%">Qué incluye</th>
+        <th>Solo Dashboard</th>
+        <th>Solo Prompts</th>
+        <th class="best">✦ Bundle Completo</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Dashboard de Ventas con IA</td><td><span class="ic-y">✓</span></td><td><span class="ic-n">✗</span></td><td class="best"><span class="ic-y">✓</span></td></tr>
+        <tr><td>100 Prompts Excel + IA</td><td><span class="ic-n">✗</span></td><td><span class="ic-y">✓</span></td><td class="best"><span class="ic-y">✓</span></td></tr>
+        <tr><td>Código VBA + integración ChatGPT</td><td><span class="ic-y">✓</span></td><td><span class="ic-n">✗</span></td><td class="best"><span class="ic-y">✓</span></td></tr>
+        <tr><td>Prompts de ventas, finanzas, RRHH</td><td><span class="ic-n">✗</span></td><td><span class="ic-y">✓</span></td><td class="best"><span class="ic-y">✓</span></td></tr>
+        <tr><td>Actualizaciones de por vida</td><td><span class="ic-y">✓</span></td><td><span class="ic-y">✓</span></td><td class="best"><span class="ic-y">✓</span></td></tr>
+        <tr><td>Garantía 7 días</td><td><span class="ic-y">✓</span></td><td><span class="ic-y">✓</span></td><td class="best"><span class="ic-y">✓</span></td></tr>
+        <tr>
+          <td style="font-weight:600">Precio total</td>
+          <td style="font-family:'Space Mono',monospace;color:var(--muted2)">$49</td>
+          <td style="font-family:'Space Mono',monospace;color:var(--muted2)">$19</td>
+          <td class="best" style="font-family:'Space Mono',monospace;color:var(--gold);font-weight:700;font-size:16px">$59 <span style="font-size:11px;color:var(--green)">(ahorrás $9)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══ REVIEWS ═══ -->
+<div class="reviews-bg">
+  <div style="max-width:1140px;margin:0 auto;text-align:center">
+    <div class="slabel" style="justify-content:center;display:flex">LO QUE DICEN</div>
+    <h2 class="stitle">Resultados<br><em>reales.</em></h2>
+  </div>
+  <div class="reviews-grid reveal">
+    <div class="review">
+      <div class="rev-stars">★★★★★</div>
+      <div class="rev-text">"Compré el bundle y en la primera semana recuperé la inversión. <strong>El dashboard me mostró que un canal que casi no miraba representaba el 38% de mis ventas.</strong> Los prompts me ayudaron a presentar los resultados a mi socio."</div>
+      <div class="rev-author"><div class="rev-av">AG</div><div><div class="rev-name">Andrés G.</div><div class="rev-role">Dueño de PYME · Rosario</div></div></div>
+    </div>
+    <div class="review">
+      <div class="rev-stars">★★★★★</div>
+      <div class="rev-text">"Soy consultora y <strong>el bundle es mi herramienta número uno para entregar análisis rápidos a clientes.</strong> Cargo los datos, presiono el botón de IA, y en 10 minutos tengo el informe ejecutivo listo."</div>
+      <div class="rev-author"><div class="rev-av">CM</div><div><div class="rev-name">Claudia M.</div><div class="rev-role">Consultora de negocios · CABA</div></div></div>
+    </div>
+    <div class="review">
+      <div class="rev-stars">★★★★★</div>
+      <div class="rev-text">"Dudé entre comprar solo el dashboard o el bundle. Elegiría el bundle sin dudarlo. <strong>Los prompts de RRHH los uso tanto como el dashboard.</strong> Son dos herramientas completamente distintas que se complementan perfecto."</div>
+      <div class="rev-author"><div class="rev-av">LR</div><div><div class="rev-name">Lucas R.</div><div class="rev-role">Gerente general · Córdoba</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FAQ ═══ -->
+<div class="wrap">
+<section class="section reveal">
+  <div class="slabel">PREGUNTAS</div>
+  <h2 class="stitle" style="margin-bottom:44px">Todo<br><em>claro.</em></h2>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">¿Los dos productos llegan en una sola descarga?<span class="faq-chev">▾</span></button><div class="faq-a"><p>Sí. Recibís un ZIP con <strong>Dashboard_Ventas_IA.xlsx</strong> y <strong>Pack_100_Prompts_Excel_IA.xlsx</strong>. Todo en una sola descarga instantánea por email.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">¿Necesito saber programar para usar el dashboard?<span class="faq-chev">▾</span></button><div class="faq-a"><p>No. El código VBA ya está escrito. Solo copiás tu API Key de OpenAI en una celda. <strong>El proceso completo lleva menos de 10 minutos</strong> siguiendo las instrucciones incluidas.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">¿Los prompts funcionan con ChatGPT gratuito?<span class="faq-chev">▾</span></button><div class="faq-a"><p>Sí, todos los prompts funcionan con la versión gratuita de ChatGPT. También son compatibles con <strong>Microsoft Copilot</strong> (incluido en Office 365) y <strong>Google Gemini</strong>.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">¿Qué versión de Excel necesito?<span class="faq-chev">▾</span></button><div class="faq-a"><p>Excel 2016, 2019 o Microsoft 365. La integración con IA (VBA) requiere <strong>Excel para Windows</strong>. En Mac podés usar el dashboard y los prompts sin el botón automático de IA.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">¿Ya compré uno de los dos por separado. ¿Puedo acceder al bundle?<span class="faq-chev">▾</span></button><div class="faq-a"><p>Escribinos con tu comprobante y te enviamos el otro producto por la diferencia de precio. <strong>No te cobramos el bundle completo si ya tenés uno.</strong></p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">¿Hay garantía de devolución?<span class="faq-chev">▾</span></button><div class="faq-a"><p><strong>7 días de garantía sin preguntas.</strong> Si el bundle no cumple lo prometido, te devolvemos el dinero completo. Sin formularios, sin excusas.</p></div></div>
+  </div>
+</section>
+</div>
+
+<!-- ═══ FINAL CTA ═══ -->
+<div class="final-cta" id="comprar">
+  <div class="slabel" style="justify-content:center;display:flex">PRECIO ESPECIAL DE LANZAMIENTO</div>
+  <h2 class="final-title">El kit completo<br>por <em>$59.</em></h2>
+  <p class="final-sub">Un solo pago. Los dos productos. Descarga instantánea. Actualizaciones de por vida.</p>
+  <div class="cta-box reveal">
+    <div class="cb-title">🎁 Bundle Excel + IA COMPLETO</div>
+    <div class="cb-includes">
+      <div class="ci-row"><span class="ci-ck" style="color:var(--cyan)">📊</span><span class="ci-txt"><strong>Dashboard de Ventas con IA</strong> — Excel + ChatGPT integrado</span></div>
+      <div class="ci-row"><span class="ci-ck" style="color:var(--amber)">✦</span><span class="ci-txt"><strong>100 Prompts Excel + IA</strong> — 5 categorías · 3 niveles</span></div>
+      <div class="ci-row"><span class="ci-ck" style="color:var(--green)">✅</span><span class="ci-txt"><strong>Código VBA completo</strong> para activar la IA en Excel</span></div>
+      <div class="ci-row"><span class="ci-ck" style="color:var(--green)">✅</span><span class="ci-txt"><strong>Actualizaciones de por vida</strong> sin costo adicional</span></div>
+      <div class="ci-row"><span class="ci-ck" style="color:var(--green)">✅</span><span class="ci-txt"><strong>Garantía 7 días</strong> · devolución completa sin preguntas</span></div>
+    </div>
+    <div class="price-display">
+      <div class="pd-was">$68</div>
+      <div class="pd-now">$59</div>
+      <div class="pd-usd">USD</div>
+    </div>
+    <div class="save-tag">✓ Ahorrás $9 USD — 13% de descuento vs compra separada</div>
+    <!-- REEMPLAZÁ href CON TU LINK DE HOTMART -->
+    <a href="https://pay.hotmart.com/REEMPLAZA-CON-TU-LINK-DE-HOTMART" class="btn-cta-main">
+      Obtener el bundle ahora →
+    </a>
+    <div class="cb-guar">🔒 Pago seguro · Hotmart · Descarga instantánea por email</div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-brand">Excel · IA Tools</div>
+  <div class="foot-note">© 2026 · Producto digital · Todos los derechos reservados</div>
+</footer>
+
+<script>
+function faq(btn){
+  const a=btn.nextElementSibling,c=btn.querySelector('.faq-chev'),open=a.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('.faq-chev.rot').forEach(x=>x.classList.remove('rot'));
+  if(!open){a.classList.add('open');c.classList.add('rot');}
+}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Rings animation
+const rings=document.querySelectorAll('.ring');
+let t=0;
+(function anim(){t+=.003;rings.forEach((r,i)=>{r.style.transform=`rotate(${t*(i+1)*8}deg)`});requestAnimationFrame(anim)})();
+</script>
+</body>
+</html>
